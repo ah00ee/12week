@@ -10,6 +10,7 @@ port = sys.argv[1]
 try:
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind(("192.168.56.1", int(port)))
+    print('바보')
 except socket.error:
 	print("failed to create socket")
 	sys.exit()
