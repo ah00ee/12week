@@ -10,8 +10,13 @@ port = sys.argv[1]
 '''
 try:
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+<<<<<<< HEAD
     sock.bind(("0.0.0.0", int(8111)))
     print('바보')
+=======
+    sock.bind(("0.0.0.0", int(port)))
+    print("server socket created")
+>>>>>>> e01a96db449e14d000e909d5637f715246909f22
 except socket.error:
 	print("failed to create socket")
 	sys.exit()
