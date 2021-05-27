@@ -2,14 +2,15 @@ import socket
 import os
 import sys
 import hashlib
-
+'''
 if len(sys.argv) != 2:
     print("Fail! - Require two arguments.")
     sys.exit()
 port = sys.argv[1]
+'''
 try:
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.bind(("192.168.56.1", int(port)))
+    sock.bind(("0.0.0.0", int(8111)))
     print('바보')
 except socket.error:
 	print("failed to create socket")
